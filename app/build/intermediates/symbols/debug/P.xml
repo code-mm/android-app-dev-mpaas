@@ -1,0 +1,22 @@
+<!-- This file contains <public> resource definitions for all
+     resources that were generated from the source data. -->
+
+<resources>
+
+  <!-- PRIVATE SECTION.  These resources have not been declared public.
+       You can make them public my moving these lines into a file in res/values. -->
+
+  <!-- Declared at res\drawable\yw_1222.jpg:0 -->
+  <public type="drawable" name="yw_1222" id="0x7f020000" />
+
+  <!-- Declared at res\mipmap-mdpi-v4\ic_launcher.png:0 -->
+  <!-- Declared at res\mipmap-hdpi-v4\ic_launcher.png:0 -->
+  <!-- Declared at res\mipmap-xhdpi-v4\ic_launcher.png:0 -->
+  <!-- Declared at res\mipmap-xxhdpi-v4\ic_launcher.png:0 -->
+  <!-- Declared at res\mipmap-xxxhdpi-v4\ic_launcher.png:0 -->
+  <public type="mipmap" name="ic_launcher" id="0x7f030000" />
+
+  <!-- Declared at E:\project\app\android\dev\app\build\intermediates\res\merged\debug\values\values.xml:3 -->
+  <public type="string" name="app_name" id="0x7f040000" />
+
+</resources>

@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.alipay.portal'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        applicationId "org.ms.dev"
+        minSdkVersion 24
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0.0.0"
+    }
+    signingConfigs {
+        release {
+            keyAlias 'dev'
+            keyPassword 'dev2020'
+            storeFile file('./dev.jsk')
+            storePassword 'dev2020'
+        }
+        debug {
+            keyAlias 'dev'
+            keyPassword 'dev2020'
+            storeFile file('./dev.jsk')
+            storePassword 'dev2020'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            signingConfig signingConfigs.debug
+        }
+    }
+
+}
+
+
+portal {
+    allSlinks true
+    mergeAssets true
+}
+
+dependencies {
+
+
+    bundle "org.ms.dev.launcher:dev-portal-build:1.0-SNAPSHOT:raw@jar"
+    manifest "org.ms.dev.launcher:dev-portal-build:1.0-SNAPSHOT:AndroidManifest@xml"
+
+}
+
+apply plugin: 'com.alipay.apollo.baseline.update'
+mpaascomponents {
+// when you want exclude mpaas dependencies ,you can add dependency ga to to excludeDependencies
+// or set removed = true in mpaaspakcages.json
+    excludeDependencies = ["com.alipay.android.phone.thirdparty:androidsupport-build", "com.alipay.android.phone.thirdparty:androidsupportrecyclerview-build"]
+}
